@@ -1,0 +1,10 @@
+<div class="card" id="tarjeta" (click)="clickenModelo(modelo.id)">
+    <div class="card-body" id="tarjeta-body">
+        <h5>{{modelo.name}}</h5>
+        <p>{{modelo.year}} | ${{modelo.price}}</p>
+    </div>
+    <img [src]="modelo.photo | img" class="card-img-top img-fluid" alt="auto">
+    <div id="contenedor">
+        <button>Ver Modelo</button>
+    </div>
+</div>

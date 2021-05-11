@@ -1,0 +1,42 @@
+<h1>Descubrí todos los modelos</h1>
+
+<div class="autos">
+
+    <nav class="d-flex justify-content-between navbar" id="line">
+        <div class="d-flex align-items-start">
+            <a id="filtrar" (mouseover)="mouseOver1 = true" (mouseout)="mouseOver1 = false">Filtrar por <img *ngIf="!mouseOver1" src="assets/img/flechaAbajo.svg" alt="flecha">
+                <img *ngIf="mouseOver1" src="assets/img/flechaArriba.svg" alt="flecha"> </a>
+            <div class="dropDown-r" [ngClass]="{'aparece-m' : mouseOver1 }" (click)="mouseOver1 = false" (mouseover)="mouseOver1 = true" (mouseout)="mouseOver1 = false">
+                <a class="chips" [ngClass]="{'aparece-m' : mouseOver1 }" [routerLink]="[ '/autos/todos'] " routerLinkActive="activated">Todos</a>
+                <a class="chips" [ngClass]="{'aparece-m' : mouseOver1 }" [routerLink]="[ '/autos/soloAutos'] " routerLinkActive="activated">Autos</a>
+                <a class="chips" [ngClass]="{'aparece-m' : mouseOver1 }" [routerLink]="[ '/autos/pickups'] " routerLinkActive="activated">Pickups y Comerciales</a>
+                <a class="chips" [ngClass]="{'aparece-m' : mouseOver1 }" [routerLink]="[ '/autos/suv'] " routerLinkActive="activated">SUVs y Crossovers</a>
+            </div>
+        </div>
+        <div class="dropDown">
+            <div id="ordenar-padre" class="d-flex" (mouseover)="mouseOver2 = true" (mouseout)="mouseOver2 = false">
+                <a id="ordenarPor">Ordenar por</a>
+                <img *ngIf="!mouseOver2" src="assets/img/flechaAbajo.svg" alt="flecha">
+                <img *ngIf="mouseOver2" src="assets/img/flechaArriba.svg" alt="flecha">
+            </div>
+            <div class="conector" (mouseover)="mouseOver2 = true" (mouseout)="mouseOver2 = false"></div>
+            <div class="dropDown-content" (click)="mouseOver2 = false" (mouseover)="mouseOver2 = true" (mouseout)="mouseOver2 = false" [ngClass]="{'aparece-l' : mouseOver2 }">
+                <a (click)="deNada()">Nada</a>
+                <a (click)="deMenosaMasp()">De <span>menor</span> a <span>mayor</span> precio</a>
+                <a (click)="deMasaMenosP()">De <span>mayor</span> a <span>menor</span> precio</a>
+                <a (click)="deMasaMenosA()">Más <span>nuevos</span> primero</a>
+                <a (click)="deMenosaMasA()">Más <span>viejos</span> primero</a>
+            </div>
+        </div>
+    </nav>
+    <router-outlet *ngIf="this.modelos !== undefined"></router-outlet>
+
+</div>
+
+
+
+<!-- <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3" *ngFor="let modelo of modelos">
+        <app-tarjeta [modelo]="modelo"></app-tarjeta>
+    </div>
+</div> -->

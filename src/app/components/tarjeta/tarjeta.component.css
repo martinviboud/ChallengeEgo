@@ -1,0 +1,63 @@
+#tarjeta {
+    margin-top: 75px;
+    border: none;
+    cursor: pointer;
+}
+
+#tarjeta-body {
+    text-align: center;
+    font-family: Montserrat;
+}
+
+#tarjeta-body h5 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.65px;
+    color: #000000;
+}
+
+#tarjeta-body p {
+    color: #191919;
+    letter-spacing: -0.28px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#tarjeta-body:hover {
+    color: #eb0a1e;
+}
+
+.card-body {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#tarjeta div button {
+    background-color: black;
+    margin: 0px auto;
+    width: 150px;
+    height: 34px;
+    color: white;
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15px;
+    display: none;
+}
+
+#contenedor {
+    height: 36px;
+}
+
+#tarjeta:hover div button {
+    display: block;
+}
+
+#tarjeta:hover h5 {
+    color: #eb0a1e;
+}
+
+#tarjeta:hover p {
+    color: #eb0a1e;
+}

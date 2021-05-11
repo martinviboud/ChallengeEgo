@@ -1,0 +1,12 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div *ngFor="let feature of modelFeatures" class="swiper-slide">
+            <img [src]="feature.photo | img" [alt]="feature.name" class="img-fluid">
+            <h4>{{feature.name}}</h4>
+            <p>{{feature.description}}</p>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>

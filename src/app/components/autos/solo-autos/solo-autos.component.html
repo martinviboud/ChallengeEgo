@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3" *ngFor="let modelo of modelos" [ngClass]="{ 'desaparece' : modelo.segment !== 'Autos' }">
+
+        <app-tarjeta [modelo]="modelo"></app-tarjeta>
+
+    </div>
+</div>
+
+<!-- *ngIf="modelo.segment === 'Autos'" -->

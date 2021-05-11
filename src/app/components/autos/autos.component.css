@@ -1,0 +1,173 @@
+h1 {
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #373737;
+}
+
+#line {
+    border-bottom: 1px solid rgb(233, 230, 230);
+    padding-bottom: 15px;
+}
+
+.autos {
+    margin-top: 60px;
+}
+
+#filtrar {
+    font-family: Montserrat;
+    cursor: default;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08px;
+    margin-right: 45px;
+    margin-top: 3px;
+    color: #373737;
+}
+
+#filtrar img {
+    display: none;
+}
+
+.chips {
+    letter-spacing: 0.08px;
+    color: #373737;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 8px 18px 9px 19px;
+    border-radius: 18px;
+    margin-right: 9px;
+    margin-bottom: 9px;
+}
+
+.activated {
+    background-color: #f7f7f7;
+}
+
+#ordenar-padre {
+    line-height: 15px;
+}
+
+#ordenar-padre img {
+    margin-top: 3px;
+}
+
+#ordenarPor {
+    text-align: right;
+    color: #373737;
+    margin: 4px 7px 0 0;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    cursor: default;
+}
+
+.conector {
+    color: transparent;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+}
+
+
+/* DROPDOWN */
+
+.dropDown-content {
+    position: absolute;
+    z-index: 1;
+    width: 170px;
+    height: 184px;
+    right: 0px;
+    top: 39px;
+    box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background-color: white;
+    display: none;
+}
+
+.dropDown-content a {
+    display: none;
+    padding-left: 16px;
+    height: 37px;
+    font-family: Montserrat;
+    font-size: 10px;
+    border-top: 1px solid rgb(233, 230, 230);
+    line-height: 36px;
+}
+
+.dropDown-content a:hover {
+    background-color: rgba(209, 214, 214, 0.2);
+}
+
+.dropDown-content a span {
+    font-weight: 600;
+}
+
+.aparece-l,
+.aparece-l>a {
+    display: block;
+}
+
+@media (max-width: 1202px) {
+    .dropDown-r {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 158px;
+        height: 144px;
+        top: 39px;
+        box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        background-color: white;
+    }
+    .chips {
+        display: none;
+        padding-left: 16px;
+        height: 37px;
+        font-family: Montserrat;
+        font-size: 10px;
+        border-top: 1px solid rgb(233, 230, 230);
+        line-height: 36px;
+        border-radius: 0px;
+        background-color: white;
+        margin-bottom: -2px;
+        padding: 0 0 0 8px;
+        margin-right: 0px;
+    }
+    .chips:hover {
+        background-color: rgba(209, 214, 214, 0.2);
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .dropDown-content {
+        top: 39px;
+    }
+    #ordenar-padre {
+        margin-bottom: -5px;
+    }
+    #ordenarPor {
+        margin-top: 1px;
+    }
+    .dropDown-content a {
+        padding-left: 8px;
+    }
+    .aparece-m {
+        display: block;
+    }
+    .activated {
+        background-color: white;
+    }
+    #filtrar img {
+        display: inline;
+    }
+}
+
+app-tarjeta {
+    min-width: 250px;
+    margin-top: 75px;
+}

@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-7 col-sm-12">
+
+        <img [src]=" miModelo.photo | img" [alt]="miModelo.name" class="img-fluid">
+
+    </div>
+    <div class="col-md-5 col-sm-12" id="intro">
+        <span>{{miModelo.name}}</span>
+        <h1>{{miModelo.title}}</h1>
+        <p>{{miModelo.description}}</p>
+    </div>
+</div>
+
+<app-slider [modelFeatures]="modelFeatures"></app-slider>
+
+<div id="highlights">
+    <div class="row fila">
+        <div class="col-md-6 col-sm-12 gy-3 order-md-2">
+            <img [src]="modelHighlights[0].image | img" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-sm-12 order-md-1 texto">
+            <h2>{{modelHighlights[0].title}}</h2>
+            <p>{{modelHighlights[0].content}}</p>
+        </div>
+    </div>
+    <div class="row fila">
+        <div class="col-md-6 col-sm-12 gy-3">
+            <img [src]="modelHighlights[1].image | img" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-sm-12 texto">
+            <h2>{{modelHighlights[1].title}}</h2>
+            <p>{{modelHighlights[1].content}}</p>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+#intro {
+    color: #373737;
+    font-family: Montserrat;
+}
+
+#contenedor {
+    padding-left: 20px !important;
+}
+
+#intro h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#intro span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#intro p {
+    font-size: 16px;
+    letter-spacing: -0.1px;
+}
+
+#highlights {
+    margin-top: 563px;
+}
+
+#highlights .fila {
+    margin-top: 55px;
+}
+
+#highlights img {
+    border-radius: 5px;
+}
+
+.texto {
+    padding: 73px 99px 0px 96px;
+    font-family: 'Montserrat';
+    letter-spacing: -0.1;
+}
+
+.texto h2 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    color: #373737;
+}
+
+.texto p {
+    font-family: 'Montserrat';
+    color: #373737;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .texto {
+        padding: 10px;
+    }
+    #highlights {
+        margin-top: 450px;
+    }
+    #highlights .fila {
+        margin-top: 40px;
+    }
+}

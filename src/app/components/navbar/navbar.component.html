@@ -1,0 +1,62 @@
+<!-- SIDENAV -->
+
+<div class="sidenav" [ngClass]="{'openSideNav' : sideNav }">
+    <div>
+        <a class="closebtn" (click)="openSide()"><span>Cerrar</span><img  src="assets/img/cruz.svg" alt="cruz"></a>
+        <a href="#">Modelos</a>
+        <a href="#">Servicios y Accesorios</a>
+        <a href="#">Financiación</a>
+        <a href="#">Reviews y Comunidad</a>
+    </div>
+    <hr>
+    <div>
+        <a href="#">Toyota Mobility Service</a>
+        <a href="#">Toyota Gazoo Racing</a>
+        <a href="#">Toyota Híbridos</a>
+    </div>
+    <hr>
+    <div>
+        <a href="#">Concesionarios</a>
+        <a href="#">Test Drive</a>
+        <a href="#">Contacto</a>
+    </div>
+    <br>
+    <div id="last-div">
+        <a href="#">Actividades</a>
+        <a href="#">Servicios al Cliente</a>
+        <a href="#">Ventas Especiales</a>
+        <a href="#">Innovación</a>
+        <a href="#">Prensa</a>
+        <a href="#">Acerca de...</a>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div id=" main ">
+    <nav class="navbar Rectangle " [ngClass]="{ 'turnsBlack' : sideNav } ">
+        <div class="d-flex ">
+            <div>
+                <a class="navbar-brand Logo " href="https://www.agenciaego.com.ar/" target="_blank">
+                    <img src="assets/img/logo.svg " alt="logo ">
+                </a>
+            </div>
+            <a [routerLink]="[ '/autos'] " routerLinkActive="activated " [ngClass]="{ 'turnsBlack' : sideNav } " class="modelos ">
+                Modelos</a>
+
+
+            <a [routerLink]="[ '/ficha']" routerLinkActive="activated" [ngClass]="{ 'turnsBlack' : sideNav } " class="ficha-de-modelo" style="cursor: default;">
+                    Ficha de modelo</a>
+        </div>
+
+        <div class="menu-toggle" (click)="openSide()">
+            <span>Menú</span>
+            <img src="assets/img/gray.svg " alt="menu ">
+        </div>
+    </nav>
+    <div class="container ">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<div id="telon" (click)="openSide() " [ngClass]="{'aparece' : sideNav }">
+</div>
+<footer></footer>
