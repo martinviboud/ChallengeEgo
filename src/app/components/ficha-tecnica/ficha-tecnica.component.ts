@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModelosService } from '../../services/modelos.service';
 import { ModeloDetalle, ModelFeature, ModelHighlight } from '../../interfaces/modeloDetalle.interface';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-ficha-tecnica',
@@ -13,9 +14,11 @@ export class FichaTecnicaComponent implements OnInit {
   modelFeatures: ModelFeature[];
   modelHighlights: ModelHighlight[];
   constructor(private activatedRoute: ActivatedRoute,
-              private service: ModelosService ) { }
+              private service: ModelosService,
+              private location: Location ) { }
 
   ngOnInit(): void {
+    window.scroll(0,0);
     const id = this.activatedRoute.snapshot.params.id;
     this.service.getModelDetail(id).subscribe(data => {
       this.miModelo = data;
@@ -23,5 +26,7 @@ export class FichaTecnicaComponent implements OnInit {
       this.modelHighlights = data.model_highlights;
     })
   }  
-  
+  back(){
+    this.location.back();
+  }
 }

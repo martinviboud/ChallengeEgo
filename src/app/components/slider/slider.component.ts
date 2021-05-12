@@ -44,7 +44,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
+      }
     });
   }
 }
