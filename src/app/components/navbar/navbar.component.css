@@ -222,6 +222,12 @@ footer {
     .Rectangle {
         width: 100%;
     }
+    .Logo img {
+        margin-top: 0px;
+    }
+    .Logo {
+        margin-left: 15px;
+    }
 }
 
 @media (max-width: 1202px) {
